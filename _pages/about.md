@@ -25,4 +25,6 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-Jiahua Wu is an Associate Professor of Operations at Imperial College Business School. He received his Ph.D. in Operations Management from Rotman School of Management, University of Toronto. He also holds a Master in Electrical and Computer Engineering from University of Toronto, and a Bachelor in Electronic Engineering from Tsinghua University. Jiahua's research interests include sharing economy, revenue management and pricing, and supply chain management.
+Hi! I am an Associate Professor of Operations at [Imperial College Business School](https://www.imperial.ac.uk/business-school/). I received a Ph.D. in Operations Management from [Rotman School of Management](https://www.rotman.utoronto.ca/), University of Toronto. I also hold a Master in [Electrical and Computer Engineering](https://www.ece.utoronto.ca/) from University of Toronto, and a Bachelor in [Electronic Engineering](https://www.ee.tsinghua.edu.cn/en/) from Tsinghua University. 
+
+My research interests include sharing economy, revenue management and pricing, and supply chain management.
