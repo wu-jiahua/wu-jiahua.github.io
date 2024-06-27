@@ -12,7 +12,7 @@ profile:
     <p>386A Business School</p>
     <p>South Kensington Campus</p>
     <p>Imperial College London</p>
-    <p>UK SW7 2AZ</p>
+    <p>UK, SW7 2AZ</p>
 
 # news: true # includes a list of news items
 # selected_papers: true # includes a list of papers marked as "selected={true}"
