@@ -4,7 +4,7 @@ permalink: /research/
 title: Research
 # description: Teaching Experience
 nav: true
-nav_order: 6
+nav_order: 2
 ---
 You can also find my articles on [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1671980) and [Google Scholar](https://scholar.google.com/citations?user=YoOys2oAAAAJ&hl=en).
 
