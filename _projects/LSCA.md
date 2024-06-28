@@ -2,7 +2,7 @@
 layout: page
 title: Logistics and Supply Chain Analytics
 description: MSc Business Analytics
-img: assets/img/LSCA.jpg
+img: assets/img/SCA.png
 importance: 2
 # category: work
 # related_publications: true
