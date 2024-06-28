@@ -14,7 +14,7 @@ profile:
     <p>Imperial College London</p>
     <p>UK, SW7 2AZ</p>
 
-# news: true # includes a list of news items
+news: true # includes a list of news items
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
@@ -25,6 +25,7 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-Hi! I am an Associate Professor of Operations at [Imperial College Business School](https://www.imperial.ac.uk/business-school/). I received a Ph.D. in Operations Management from [Rotman School of Management](https://www.rotman.utoronto.ca/), University of Toronto. I also hold a Master in [Electrical and Computer Engineering](https://www.ece.utoronto.ca/) from University of Toronto, and a Bachelor in [Electronic Engineering](https://www.ee.tsinghua.edu.cn/en/) from Tsinghua University. 
+Hi! I am an Associate Professor of Operations at [Imperial College Business School](https://www.imperial.ac.uk/business-school/). My research interests focus on designing incentives, such as pricing and information, to enhance the operational efficiency of firms in a fair and transparent manner. Sector-wise, I am interested in sharing economy, online platforms, and supply chains in general.
 
-My research interests include sharing economy, revenue management and pricing, and supply chain management.
+I received a Ph.D. in Operations Management from [Rotman School of Management](https://www.rotman.utoronto.ca/), University of Toronto. I also hold a Master in [Electrical and Computer Engineering](https://www.ece.utoronto.ca/) from University of Toronto, and a Bachelor in [Electronic Engineering](https://www.ee.tsinghua.edu.cn/en/) from Tsinghua University. 
+
