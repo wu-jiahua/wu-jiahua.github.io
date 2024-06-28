@@ -23,7 +23,7 @@ This module prepares students to visualise and analyse data, and to use analytic
     * Fairness and privacy of data analytics
     * Cloud-based technology
 
-### A Video Introduction 
+### A video introduction 
 <div class="row mt-3">
   <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/DAVB.mp4" class="img-fluid rounded z-depth-1" controls=true %}
