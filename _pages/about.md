@@ -9,9 +9,9 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>386A Business School</p>
-    <p>South Kensington Campus</p>
-    <p>Imperial College London</p>
+    <p>386A Business School,</p>
+    <p>South Kensington Campus,</p>
+    <p>Imperial College London.</p>
     <p>UK, SW7 2AZ</p>
 
 news: true # includes a list of news items
