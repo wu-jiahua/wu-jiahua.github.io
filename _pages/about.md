@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p>386A Business School,</p>
     <p>South Kensington Campus,</p>
-    <p>Imperial College London.</p>
+    <p>Imperial College London,</p>
     <p>UK, SW7 2AZ</p>
 
 news: true # includes a list of news items
