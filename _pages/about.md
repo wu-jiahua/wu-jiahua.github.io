@@ -29,3 +29,4 @@ Hi! I am an Associate Professor of Operations at [Imperial College Business Scho
 
 I received a Ph.D. in Operations Management from [Rotman School of Management](https://www.rotman.utoronto.ca/), University of Toronto. I also hold a Master in [Electrical and Computer Engineering](https://www.ece.utoronto.ca/) from University of Toronto, and a Bachelor in [Electronic Engineering](https://www.ee.tsinghua.edu.cn/en/) from Tsinghua University. 
 
+I am seeking highly motivated PhD students and research assistants (RAs) with a strong mathematical background. If you are interested in working with me, please feel free to send an email along with your CV, transcripts, and any other documents that showcase your research capabilities and potential.
