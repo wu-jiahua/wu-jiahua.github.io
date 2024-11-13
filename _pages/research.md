@@ -29,7 +29,7 @@ You can also find my articles on [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsB
 
 * [IT and operations miscoordination in a supply chain: Case of a quick-service restaurant chain](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4666841) with P. Luo and M. Hu
 
-* [Prosocial spectrum of crowdfunding projects](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3677790) with W. Deng, M. Shi and M. Hu
+* [Over-pledging in crowdfunding: Evidence from Kickstarter](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3677790) with W. Deng, M. Shi and M. Hu
 
 ### Books and Conference Publications
 * [Online group buying and crowdfunding: Two cases of all-or-nothing mechanisms](https://link.springer.com/chapter/10.1007/978-3-030-01863-4_14) with M. Hu and M. Shi, 2019, **Sharing Economy: Making Supply Meet Demand**, M. Hu (ed.), 319--346, in *Springer Series in Supply Chain Management*, C. Tang (series ed.)
