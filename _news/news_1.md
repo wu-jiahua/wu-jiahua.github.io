@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "[Information Design and Pricing of Supply Competition in Lead-Selling Platforms](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4872681)" has been accepted in EC 2024! :smile:
+<!--- Our paper "[Information Design and Pricing of Supply Competition in Lead-Selling Platforms](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4872681)" has been accepted in EC 2024! :smile: -->
