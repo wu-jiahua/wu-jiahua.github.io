@@ -98,7 +98,12 @@
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
                   {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
-                  <a class="nav-link" href="{{ url | relative_url }}">
+                  {% if p.nav_url %}
+                    {% assign nav_href = p.nav_url %}
+                  {% else %}
+                    {% assign nav_href = url %}
+                  {% endif %}
+                  <a class="nav-link" href="{{ nav_href | relative_url }}">
                     {{- p.title }}
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
