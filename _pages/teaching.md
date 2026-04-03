@@ -2,8 +2,9 @@
 layout: page
 title: Teaching
 permalink: /teaching/
-description: The courses I've been teaching over the last couple of years.
-nav: true
+published: false
+description: Courses I have taught in recent years.
+nav: false
 nav_order: 3
 # display_categories: [work, fun]
 horizontal: false
