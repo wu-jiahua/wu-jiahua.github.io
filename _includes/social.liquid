@@ -1,5 +1,5 @@
 {% if site.email %}
-  <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
+  <a href="mailto:{{ site.email | encode_email }}" title="Email"><i class="fa-solid fa-square-envelope"></i></a>
 {% endif %}
 {% if site.telegram_username %}
   <a href="https://telegram.me/{{ site.telegram_username }}" title="telegram"><i class="fa-brands fa-telegram"></i></a>
@@ -7,12 +7,10 @@
 {% if site.whatsapp_number %}
   <a href="https://wa.me/{{ site.whatsapp_number }}" title="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 {% endif %}
-{% if site.orcid_id %}
-  <a href="https://orcid.org/{{ site.orcid_id }}" title="ORCID"><i class="ai ai-orcid"></i></a>
-{% endif %}
 {% if site.scholar_userid %}
-  <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+  <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" title="Google Scholar"><i class="ai ai-google-scholar-square"></i></a>
 {% endif %}
+<a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id={{ site.ssrn_id | default: '1671980' }}" title="SSRN"><i class="ai ai-ssrn-square"></i></a>
 {% if site.semanticscholar_id %}
   <a href="https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}" title="Semantic Scholar"><i class="ai ai-semantic-scholar"></i></a>
 {% endif %}
@@ -42,6 +40,9 @@
 {% endif %}
 {% if site.linkedin_username %}
   <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+{% endif %}
+{% if site.orcid_id %}
+  <a href="https://orcid.org/{{ site.orcid_id }}" title="ORCID"><i class="ai ai-orcid-square"></i></a>
 {% endif %}
 {% if site.x_username %}
   <a href="https://twitter.com/{{ site.x_username }}" title="X"><i class="fa-brands fa-x-twitter"></i></a>
