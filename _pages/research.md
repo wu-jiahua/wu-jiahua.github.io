@@ -24,12 +24,12 @@ You can also find my articles on [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsB
 * [Simultaneous vs. sequential group-buying mechanisms](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1862465) with M. Hu and M. Shi, 2013, **Management Science**, 59(12), 2805-2822
 
 ### Working Papers
-* [Pricing AI as a Service](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254459) with I. Lobel and Y. Sun
+* [Pricing AI as a service](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254459) with I. Lobel and Y. Sun
 
-* [The Role of Prescreening in Auctions with Predictions](https://arxiv.org/abs/2502.12117) with Y. Sun, F. Sun and C. Yan
+* [The role of prescreening in auctions with predictions](https://arxiv.org/abs/2502.12117) with Y. Sun, F. Sun and C. Yan
     * Preliminary version accepted at WINE 2025<br><br>
 
-* [Information Design and Pricing in Lead-Selling Platforms with Supply Competition](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4872681) with Y. Sun, N. Zamani-Foroushani and Z. Liu
+* [Information design and pricing in lead-selling platforms with supply competition](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4872681) with Y. Sun, N. Zamani-Foroushani and Z. Liu
     * Preliminary version accepted at EC 2024<br><br>
 
 
