@@ -268,6 +268,10 @@ ul.task-list input[type="checkbox"] {
 }
 
 .navbar.navbar-light {
+  .navbar-nav {
+    align-items: center;
+  }
+
   a {
     &:hover {
       text-decoration: none;
@@ -280,6 +284,8 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-weight: 400;
+    transition: color 0.2s ease-in-out;
 
     &:hover {
       color: var(--global-hover-color);
@@ -288,7 +294,7 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: 400;
     color: var(--global-theme-color);
 
     &:hover {
@@ -313,6 +319,11 @@ ul.task-list input[type="checkbox"] {
         }
       }
     }
+  }
+
+  .toggle-container {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -356,7 +367,6 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-#light-toggle,
 #search-toggle {
   padding: 0;
   border: 0;
@@ -366,6 +376,25 @@ ul.task-list input[type="checkbox"] {
   &:hover {
     color: var(--global-hover-color);
   }
+}
+
+#light-toggle {
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+}
+
+#light-toggle i {
+  display: block;
 }
 
 // Social (bottom)
