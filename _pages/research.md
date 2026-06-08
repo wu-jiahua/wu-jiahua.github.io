@@ -24,6 +24,9 @@ You can also find my articles on [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsB
 * [Simultaneous vs. sequential group-buying mechanisms](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1862465) with M. Hu and M. Shi, 2013, **Management Science**, 59(12), 2805-2822
 
 ### Working Papers
+* [Beyond one shot: Contracting for sequential trials](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6899760) with Y. Sun and J. Wu
+    * Preliminary version accepted at EC 2026<br><br>
+
 * [Pricing AI as a service](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254459) with I. Lobel and Y. Sun
 
 * [The role of prescreening in auctions with predictions](https://arxiv.org/abs/2502.12117) with Y. Sun, F. Sun and C. Yan
