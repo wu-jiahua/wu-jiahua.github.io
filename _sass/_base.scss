@@ -48,6 +48,14 @@ table.table a {
   }
 }
 
+a.coauthor-link {
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-text-color);
+  }
+}
+
 .table-dark {
   background-color: transparent;
   &.table-bordered {
