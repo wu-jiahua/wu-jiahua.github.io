@@ -27,7 +27,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 Hi! I am an Associate Professor of Operations at Imperial Business School, [Imperial College London](https://www.imperial.ac.uk/). My research examines how pricing, information, and other incentives shape performance in markets and operations. My recent projects focus on technology-enabled markets, including online platforms and AI-enabled services. Broadly, my work sits at the intersection of operations and economics, and asks how firms and platforms should design policies when agents, human or AI, act in their own self-interest.
 
-I received a Ph.D. in Operations Management from Rotman School of Management, [University of Toronto](https://www.utoronto.ca/). I also hold a Master in Electrical and Computer Engineering from [University of Toronto](https://www.utoronto.ca/), and a Bachelor in Electronic Engineering from [Tsinghua University](https://www.tsinghua.edu.cn/en/). 
+I received my Ph.D. in Operations Management from the Rotman School of Management at the [University of Toronto](https://www.utoronto.ca/). I also hold a master's degree in Electrical and Computer Engineering from the [University of Toronto](https://www.utoronto.ca/) and a bachelor's degree in Electronic Engineering from [Tsinghua University](https://www.tsinghua.edu.cn/en/).
 
 <br>
 
