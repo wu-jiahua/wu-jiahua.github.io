@@ -13,6 +13,7 @@ profile:
     <p>South Kensington Campus,</p>
     <p>Imperial College London,</p>
     <p>UK, SW7 2AZ</p>
+    <p><a href="mailto:j.wu@imperial.ac.uk">j.wu@imperial.ac.uk</a></p>
 
 news: false # includes a list of news items
 # selected_papers: true # includes a list of papers marked as "selected={true}"
