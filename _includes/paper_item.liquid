@@ -1,0 +1,68 @@
+{% assign item = include.item %}
+{% assign compact = include.compact | default: false %}
+{% assign abs_prefix = include.prefix | default: 'abs' %}
+{% assign abs_id = abs_prefix | append: '-' | append: item.id %}
+
+{% if item.url contains '://' %}
+  {% assign resolved_title_url = item.url %}
+{% else %}
+  {% assign resolved_title_url = item.url | relative_url %}
+{% endif %}
+<li class="paper-item{% if compact %} paper-item-compact{% endif %}">
+  <a class="paper-title" href="{{ resolved_title_url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+
+  <div class="paper-meta">
+    {% if item.authors and item.authors.size > 0 %}
+      with
+      {% for author in item.authors -%}
+        {%- if forloop.first == false -%}
+          {%- if forloop.last %}{% if item.authors.size == 2 %} and {% else %}, and {% endif %}{% else %}, {% endif -%}
+        {%- endif -%}
+        <a class="coauthor-link" href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>
+      {%- endfor -%}
+    {% endif -%}
+    {%- if item.citation_html -%}
+      , {{ item.citation_html }}
+    {%- elsif compact and item.selected_meta -%}
+      <span class="paper-status"> &middot; {{ item.selected_meta }}</span>
+    {%- endif %}
+  </div>
+
+  {% if item.note %}
+    <div class="paper-note">{{ item.note }}</div>
+  {% endif %}
+
+  {% unless compact %}
+    {% if item.abstract or item.links %}
+      <div class="paper-actions">
+        {% if item.abstract %}
+          <button
+            type="button"
+            class="abs-toggle"
+            aria-expanded="false"
+            aria-controls="{{ abs_id }}"
+          >Abstract</button>
+        {% endif %}
+        {% if item.links %}
+          {% for link in item.links %}
+            {% if item.abstract or forloop.first == false %}
+              <span class="action-sep" aria-hidden="true">&middot;</span>
+            {% endif %}
+            {% if link.url contains '://' %}
+              {% assign resolved_link_url = link.url %}
+            {% else %}
+              {% assign resolved_link_url = link.url | relative_url %}
+            {% endif %}
+            <a class="paper-ext-link" href="{{ resolved_link_url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if item.abstract %}
+      <div id="{{ abs_id }}" class="abs-panel" hidden>
+        <p>{{ item.abstract | smartify }}</p>
+      </div>
+    {% endif %}
+  {% endunless %}
+</li>

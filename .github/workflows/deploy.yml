@@ -5,90 +5,90 @@ on:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
+    paths-ignore:
+      - "README.md"
+      - "LICENSE"
+      - ".gitignore"
   pull_request:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
+    paths-ignore:
+      - "README.md"
+      - "LICENSE"
+      - ".gitignore"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"
+          ruby-version: "3.2"
           bundler-cache: true
-      - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Install and Build 🔧
+
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --strict_front_matter
+
+      - name: Verify local links and assets
         run: |
-          pip3 install --upgrade jupyter
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
-      - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
-      - name: Deploy 🚀
+          python3 - <<'PY'
+          import glob, os, sys, urllib.parse
+          from html.parser import HTMLParser
+
+          root = os.path.abspath("_site")
+          errors = []
+
+          class LinkChecker(HTMLParser):
+              def __init__(self, html_path):
+                  super().__init__()
+                  self.html_path = html_path
+
+              def handle_starttag(self, tag, attrs):
+                  for key, val in attrs:
+                      if key not in ("href", "src") or not val:
+                          continue
+                      if val.startswith(("http://", "https://", "mailto:", "tel:", "data:", "javascript:", "#")):
+                          continue
+                      clean = urllib.parse.unquote(val.split("#", 1)[0].split("?", 1)[0])
+                      if not clean:
+                          continue
+                      if clean.startswith("/"):
+                          target = os.path.normpath(os.path.join(root, clean.lstrip("/")))
+                      else:
+                          target = os.path.normpath(os.path.join(os.path.dirname(self.html_path), clean))
+                      if os.path.isdir(target):
+                          target = os.path.join(target, "index.html")
+                      if not (os.path.isfile(target) and os.path.getsize(target) > 0):
+                          errors.append(f"{self.html_path}: broken reference '{val}' -> '{target}'")
+
+          for html_file in sorted(glob.glob(os.path.join(root, "**", "*.html"), recursive=True)):
+              if html_file.startswith(os.path.join(root, "slides") + os.sep):
+                  continue
+              with open(html_file, encoding="utf-8") as fh:
+                  LinkChecker(html_file).feed(fh.read())
+
+          if errors:
+              print("\n".join(errors), file=sys.stderr)
+              sys.exit(1)
+          print("Verified all local links and assets successfully.")
+          PY
+
+      - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:

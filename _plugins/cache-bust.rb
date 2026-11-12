@@ -1,49 +1,25 @@
-# based on https://distresssignal.org/busting-css-cache-with-jekyll-md5-hash
-# https://gist.github.com/BryanSchuetz/2ee8c115096d7dd98f294362f6a667db
+# Deterministic MD5 cache-busting filters for static assets and SCSS sources.
+require "digest/md5"
+
 module Jekyll
   module CacheBust
-    class CacheDigester
-      require 'digest/md5'
-      require 'pathname'
-
-      attr_accessor :file_name, :directory
-
-      def initialize(file_name:, directory: nil)
-        self.file_name = file_name
-        self.directory = directory
-      end
-
-      def digest!
-        [file_name, '?', Digest::MD5.hexdigest(file_contents)].join
-      end
-
-      private
-
-      def directory_files_content
-        target_path = File.join(directory, '**', '*')
-        Dir[target_path].map{|f| File.read(f) unless File.directory?(f) }.join
-      end
-
-      def file_content
-        local_file_name = file_name.slice((file_name.index('assets/')..-1))
-        File.read(local_file_name)
-      end
-
-      def file_contents
-        is_directory? ? file_content : directory_files_content
-      end
-
-      def is_directory?
-        directory.nil?
-      end
-    end
-
     def bust_file_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: nil).digest!
+      idx = file_name.index("assets/")
+      return file_name unless idx
+
+      local_path = file_name[idx..].sub(/\?.*\z/, "")
+      return file_name unless File.file?(local_path)
+
+      "#{file_name}?#{Digest::MD5.file(local_path).hexdigest}"
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      sources = (Dir["_sass/**/*"] + ["assets/css/main.scss"])
+        .select { |f| File.file?(f) }
+        .sort
+      digest = Digest::MD5.new
+      sources.each { |f| digest.update(File.binread(f)) }
+      "#{file_name}?#{digest.hexdigest}"
     end
   end
 end

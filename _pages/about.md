@@ -2,33 +2,37 @@
 layout: about
 title: About
 permalink: /
-subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle:
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
-  more_info: >
-    <p>386A Business School,</p>
-    <p>South Kensington Campus,</p>
-    <p>Imperial College London</p>
-    <p><a href="mailto:j.wu@imperial.ac.uk">j.wu@imperial.ac.uk</a></p>
+  image_circular: false
 
-news: false # includes a list of news items
-# selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+news: false
+social: false
 ---
 
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am an Associate Professor of Operations at Imperial Business School, [Imperial College London](https://www.imperial.ac.uk/). My research sits at the intersection of operations and economics, examining how firms and platforms use prices, information, and contracts to shape behavior when agents, human or AI, act in their own self-interest. My recent projects focus on online platforms and AI-enabled services.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Before joining Imperial, I received a Ph.D. in Operations Management from the Rotman School of Management and a master's degree in Electrical and Computer Engineering from the [University of Toronto](https://www.utoronto.ca/), as well as a bachelor's degree in Electronic Engineering from [Tsinghua University](https://www.tsinghua.edu.cn/en/).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+<section class="selected-research" aria-labelledby="selected-research-heading">
+  <div class="section-bar">
+    <h2 id="selected-research-heading">Selected Research</h2>
+    <a class="section-more" href="{{ '/research/' | relative_url }}">Full research list &rarr;</a>
+  </div>
+  <ul class="paper-list">
+    {% for section in site.data.research.sections %}
+      {% for paper in section.items %}
+        {% if paper.selected %}
+          {% include paper_item.liquid item=paper compact=false prefix="home-abs" %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</section>
 
-Hi! I am an Associate Professor of Operations at Imperial Business School, [Imperial College London](https://www.imperial.ac.uk/). My research examines how pricing, information, and other incentives shape performance in markets and operations. My recent projects focus on technology-enabled markets, including online platforms and AI-enabled services. Broadly, my work sits at the intersection of operations and economics, and asks how firms and platforms should design policies when agents, human or AI, act in their own self-interest.
-
-I received my Ph.D. in Operations Management from the Rotman School of Management at the [University of Toronto](https://www.utoronto.ca/). I also hold a master's degree in Electrical and Computer Engineering from the [University of Toronto](https://www.utoronto.ca/) and a bachelor's degree in Electronic Engineering from [Tsinghua University](https://www.tsinghua.edu.cn/en/).
-
-<br>
-
-**To prospective students:** I am looking for highly motivated PhD students and research assistants with strong mathematical training. If you are interested in working with me, please email me your CV, transcripts, and any other materials that would help demonstrate your research potential.
+<div class="callout-box" markdown="1">
+**To prospective students:** I am looking for highly motivated Ph.D. students and research assistants with strong mathematical training. If you are interested in working with me, please email me your CV, transcripts, and any other materials that would help demonstrate your research potential.
+</div>

@@ -1,0 +1,249 @@
+# Single source of truth for Research (/research/) and Selected Research (/).
+# Add `selected: true` to highlight an entry on the About landing page.
+# Optional `links:` items support labels such as SSRN, arXiv, Journal, Slides, Code, PDF.
+
+sections:
+  - heading: "Working Papers"
+    items:
+      - id: pricing-ai
+        title: "Pricing AI as a service"
+        url: "/assets/pdf/papers/pricing-ai.pdf"
+        selected: true
+        authors:
+          - name: "Ilan Lobel"
+            url: "https://www.stern.nyu.edu/faculty/bio/ilan-lobel"
+          - name: "Yanwei Sun"
+            url: "https://yanwei-sun.github.io/"
+        note: "Finalist, INFORMS Revenue Management and Pricing Section Jeff McGill Student Paper Award, 2026"
+        links:
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254459"
+          - label: "Slides"
+            url: "/slides/pricing-ai/"
+        abstract: >-
+          We study AI as a Service, in which a monopolistic provider sells downstream users access to AI agents/models. Motivated by prevalent contracting practices, we focus on conversation-based pricing (CBP), which charges a fixed fee per invocation, and outcome-based pricing (OBP), which charges only upon success. Buyers have private information about valuation and task difficulty, which determines the AI's success probability. We start with a binary-type model: CBP reduces to a standard screening problem, whereas OBP induces two-dimensional screening because success-contingent payments interact with type-dependent success probabilities. Under an OBP-specific increasing-differences condition, we characterise the optimal OBP menu and provide a "virtual type" interpretation that adjusts value by success probabilities. We show that OBP outperforms CBP when per-success value (value normalised by success probability) is aligned with success probability across segments; that is, buyers who are willing to pay more per success are also those for whom success occurs sufficiently often. When this alignment fails, CBP dominates. The underlying driver is a distinctive feature of OBP: a buyer may accept a high per-success price yet generate low, or even negative, expected profit for the provider. The same force yields an asymmetric robustness result: CBP guarantees at least half of second-best revenue, while OBP can be arbitrarily poor in the worst case. We apply the theory to a customer-service queueing setting in which a buyer deploys an AI service to handle incoming customer requests, and only unresolved requests are escalated to downstream human agents. We show that misalignment between AI capability and human service rate favours OBP, whereas aligned systems favour CBP. Finally, we extend the analysis to many types and show that the alignment logic continues to govern the comparison.
+
+      - id: beyond-one-shot
+        title: "Beyond one shot: Contracting for sequential trials"
+        url: "/assets/pdf/papers/beyond-one-shot.pdf"
+        selected: true
+        authors:
+          - name: "Yanwei Sun"
+            url: "https://yanwei-sun.github.io/"
+          - name: "Jibang Wu"
+            url: "https://wujibang.com/"
+        note: "Preliminary version accepted at EC 2026"
+        links:
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6899760"
+          - label: "Slides"
+            url: "/slides/beyond-one-shot/"
+        abstract: >-
+          We study contract design in a setting where an agent can adaptively choose among several costly actions and resample the same action, while the principal observes only the final reported outcome. Given a contract, the agent's best response has a reservation-value structure. Unlike Weitzman's classic search problem, however, these reservation values are stage-dependent because the agent's willingness to continue depends on how many trials remain. Our main result is that a calibrated debt contract, which pays the agent only for outcomes above a face value set at the highest Weitzman index, nearly solves this dynamic incentive problem. Its payoff loss relative to the second best decays exponentially in the trial cap. In the infinite-trial benchmark, the same contract is exactly optimal: it implements the first-best value and leaves the agent with zero expected rent. We also show that more experimentation opportunities need not benefit either party. Increasing the trial cap can expand the agent's hidden continuation opportunities enough that the re-optimized second-best contract may simultaneously lower both the principal's and the agent's equilibrium payoffs. Finally, we extend the analysis to time-contingent payments, correlated sampling, and multiple agents, where our main insight about the asymptotic optimality of a calibrated debt contract still holds.
+
+      - id: prescreening-auctions
+        title: "The role of prescreening in auctions with predictions"
+        url: "/assets/pdf/papers/prescreening-auctions.pdf"
+        authors:
+          - name: "Yanwei Sun"
+            url: "https://yanwei-sun.github.io/"
+          - name: "Fupeng Sun"
+            url: "https://fupeng-sun.github.io/homepage/"
+          - name: "Chiwei Yan"
+            url: "https://yanchiwei.github.io/"
+        note: "Preliminary version accepted at WINE 2025"
+        links:
+          - label: "arXiv"
+            url: "https://arxiv.org/abs/2502.12117"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5397543"
+        abstract: >-
+          Sellers often prescreen potential bidders, restricting participation to a select group of capable participants. Recent advances in machine learning and generative AI make this strategy increasingly viable by enabling the cost-effective identification of high-quality bidders. However, the practice departs from classic auction theory, which usually favors broad competition over selective exclusion. In this paper, we examine whether and under what conditions bidder prescreening can be justified. We analyze a setting in which bidders have independent and identically distributed private valuations, and the seller observes noisy signals generated by a valuation predictor. The seller determines how many top bidders to admit and, after receiving signals, selects exactly that many with the highest signal-based rankings. We demonstrate that an auction with prescreening is equivalent to a standard auction (i.e., without prescreening) but with correlated valuations. Our analysis shows that, although admitting fewer bidders leads to revenue losses in both second-price and first-price auctions, a more accurate predictor can mitigate or even fully offset these losses. In contrast, prescreening can significantly boost revenue in all-pay auctions; notably, when the predictor is perfect, admitting only two bidders is optimal. All results remain valid in the presence of reserve prices.
+
+      - id: lead-selling
+        title: "Information design and pricing in lead-selling platforms with supply competition"
+        url: "/assets/pdf/papers/lead-selling.pdf"
+        authors:
+          - name: "Yanwei Sun"
+            url: "https://yanwei-sun.github.io/"
+          - name: "Niloofar Zamani-Foroushani"
+            url: "https://profiles.imperial.ac.uk/n.zamani-foroushani20"
+          - name: "Zhe Liu"
+            url: "https://blogs.imperial.ac.uk/zhe-liu/about/"
+        note: "Preliminary version accepted at EC 2024"
+        links:
+          - label: "EC 2024"
+            url: "https://doi.org/10.1145/3670865.3673447"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4872681"
+        abstract: >-
+          In this paper, we analyze a type of platform common in the service sector, where customers can freely post tasks, and service providers pay a fee to purchase job leads and unlock the ability to communicate with these customers. We adopt a Bayesian persuasion framework to explore how the platform can leverage its informational advantage about the supplier base and pricing to strategically influence the decisions of service providers, aiming to maximize its revenue. We begin the analysis by assuming that prices are exogenously given and characterize the structure of the optimal signaling mechanism. Specifically, the platform recommends all service providers to participate when the pool size is below a certain threshold. When the pool size exceeds this threshold, the platform randomizes its recommendations between two consecutive numbers, independent of the pool size. This behavior is driven by a unique feature of our model, where the beliefs of the platform and suppliers are non-identical: a supplier's knowledge of their own participation inflates their belief about the total number of service providers. Next, we endogenize the platform's pricing decision and consider the policy space where the signaling mechanism and state-dependent pricing are jointly optimized. Notably, within this space, we find that the optimal signaling mechanism with a single price remains optimal. This result implies the superiority of the optimal signaling mechanism over the commonly adopted contingent pricing policy, where the price charged by the platform depends on the number of interested suppliers. We show that the performance discrepancy between these two policies is particularly pronounced when supply competition is intense.
+
+      - id: it-ops-miscoordination
+        title: "IT and operations miscoordination in a supply chain: Case of a quick-service restaurant chain"
+        url: "/assets/pdf/papers/it-ops-miscoordination.pdf"
+        authors:
+          - name: "Peng Luo"
+            url: "https://bs.scu.edu.cn/gongye/201909/5758.html"
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+        links:
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4666841"
+        abstract: >-
+          While information integration is widely recognized as a key strategy for enhancing supply chain performance, our study uncovers a scenario where it results in unexpected repercussions. Using data from an independent purchasing cooperative that supplies a leading quick-service restaurant chain in the U.S., we delve into the effects of a Point of Sale (POS) system upgrade implemented across the chain. Counterintuitively, we observe a dip in customer satisfaction immediately following the new POS system upgrade. Concurrently, there is a noticeable uptick in order quantities placed by store managers. This dual phenomenon—rising orders and falling customer satisfaction—points to a potential misalignment between the POS upgrade and the ingredient procurement strategy. Our hypothesis finds support from three evident data patterns: (1) A decline in customer satisfaction concerning food quality following the POS upgrade. (2) An amplified decline in customer satisfaction when the POS system is adopted by a larger cluster of stores at once. (3) A short-lived duration of the negative effects resulting from the POS system upgrade. Furthermore, our analysis reveals that the surge in order quantities after the POS upgrade can be attributed to reduced uncertainties in demand forecasting affecting the newsvendor quantity. Our study highlights the nuanced implications of integrating advanced technologies into existing operational frameworks and calls for close collaboration between IT and operations business units.
+
+      - id: over-pledging
+        title: "Over-pledging in crowdfunding: Evidence from Kickstarter"
+        url: "/assets/pdf/papers/over-pledging.pdf"
+        authors:
+          - name: "Wanjiang Deng"
+            url: "https://person.zju.edu.cn/en/dwj"
+          - name: "Mengze Shi"
+            url: "https://mark.hkust.edu.hk/faculty-and-staff/directory/mengzeshi"
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+        links:
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3677790"
+        abstract: >-
+          In the context of online reward-based crowdfunding, it is a recurring phenomenon for backers to pledge financial amounts exceeding the established requisites. This paper delineates the scope, variations, and potential correlates of such over-pledging behavior, utilizing a pledge-level dataset sourced from Kickstarter. First, over-pledged funding was common (22% of backers), substantial (19% of the total pledge amount), and essential to the success of projects. Second, significant variations in over-pledging across projects were observed. On average, the proportion of over-pledged funding to the total pledged amount for a project within dance/theatre categories surpassed that of a project within games/design categories by more than 20%. In examining the over-pledging backers, we identified two types: donors, who contribute without seeking a reward, and funders, who pledge additional sums for rewards. In alignment with extant literature on voluntary contributions, our empirical evidence lends support to (pure or impure) altruism and various strategic considerations as potential drivers of donors' contributions. Conversely, by contrasting the over-pledging patterns of funders with those of donors, we pinpoint the equitable distribution of surplus as a significant motivation underlying funders' over-pledging. Leveraging an exogenous shock at the project level, we further ascertain that funders' perceived fair value tends to escalate in response to successful crowdfunding initiatives. Overall, our findings underscore the significance of over-pledging and underline the necessity for creators to customize strategies for project setup according to their target audience, distinguishing between funders and donors.
+
+  - heading: "Journal Articles"
+    items:
+      - id: randomized-promotions
+        title: "Intertemporal price discrimination via randomized promotions"
+        url: "/assets/pdf/papers/randomized-promotions.pdf"
+        authors:
+          - name: "Hongqiao Chen"
+            url: "https://chq2024.github.io/"
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+        citation_html: '2023, <span class="paper-venue">Manufacturing &amp; Service Operations Management</span>, 25(3), 1176–1194'
+        links:
+          - label: "Journal"
+            url: "https://doi.org/10.1287/msom.2023.1194"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3223844"
+        abstract: >-
+          Problem definition: The undesirable but inevitable consequence of running promotions is that consumers can be trained to time their purchases strategically. In this paper, we study randomized promotions, where the firm randomly offers discounts over time, as an alternative strategy of intertemporal price discrimination. Methodology/results: We consider a base model where a monopolist sells a single product to a market with a constant stream of two market segments. The segments are heterogeneous in both their product valuations and patience levels. The firm precommits to a price distribution, and in each period, a price is randomly drawn from the committed distribution. We characterize the optimal price distribution as a randomized promotion policy and show that it serves as an intertemporal price discrimination mechanism such that high-valuation customers would make a purchase immediately at a regular price upon arrival, and low-valuation customers would wait for a random promotion. Compared against the optimal cyclic pricing policy, which is optimal within the strategy space of all deterministic pricing policies, the optimal randomized pricing policy beats it if low-valuation customers are sufficiently patient and the absolute discrepancy between high and low customer valuations is large enough. We extend the model in three directions. First, we consider the case where a portion of customers are myopic and would never wait. We show that the existence of myopic customers is detrimental to the firm's profitability, and the expected profit from an optimal randomized pricing policy decreases as the proportion of myopic customers in the population increases. Second, we consider Markovian pricing policies where prices are allowed to be intertemporally correlated in a Markovian fashion. This additional maneuver allows the firm to reap an even higher profit when low-valuation customers are sufficiently patient by avoiding consecutive promotions but, on average, running the promotion more frequently with a smaller discount size. Lastly, we consider a model with multiple customer segments and show that a two-point price distribution remains optimal, and our conclusion from the two-segment base model still holds under certain conditions that are adopted in the literature. Managerial implications: Our results imply that the firm may want to deliberately randomize promotions in the presence of forward-looking customers.
+
+      - id: contingent-stimulus
+        title: "Contingent stimulus in crowdfunding"
+        url: "/assets/pdf/papers/contingent-stimulus.pdf"
+        authors:
+          - name: "Longyuan Du"
+            url: "http://www.longyuandu.com/"
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+        citation_html: '2022, <span class="paper-venue">Production and Operations Management</span>, 31(9), 3543–3558'
+        links:
+          - label: "Journal"
+            url: "https://doi.org/10.1111/poms.13782"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2925962"
+        abstract: >-
+          Reward-based crowdfunding is a form of innovative financing that allows project creators to raise funds from potential backers to start their ventures. A crowdfunding project is successfully funded if and only if the predetermined funding goal is achieved within a given time. We study the optimal timing of contingently placing a "fulcrum" in the random pledging process, with the potential of tilting it toward success, which would be a win-win for the creator, backers, and platform. Specifically, we consider a model where backers arrive sequentially at a crowdfunding project. Upon arrival, a backer makes her pledging decision by taking into account the expected success of the project. We characterize the dynamics of the project's pledging process. We show that there exists a cascade effect on backers' pledging, which is mainly driven by the all-or-nothing nature of crowdfunding projects. According to our data collected from the most popular online crowdfunding platform, Kickstarter, the majority of projects fail to achieve their goals. To address this issue, we propose three contingent stimulus policies, namely, seeding, feature upgrade, and limited-time offer. As a result of the cascade effect on backers' pledging, the optimal timing to apply stimulus policies has a cutoff-time structure. Lastly, we show that the benefit of contingent policies is greatest in the middle of crowdfunding campaigns. Testing with the dataset of Kickstarter, we obtain empirical evidence that the projects' success rates improve by 14.6% on average with updates in the middle of the campaign and when the pledging progress is lagging.
+
+      - id: sales-effort
+        title: "Sales effort management under all-or-nothing constraint"
+        url: "/assets/pdf/papers/sales-effort.pdf"
+        authors:
+          - name: "Longyuan Du"
+            url: "http://www.longyuandu.com/"
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+        citation_html: '2022, <span class="paper-venue">Management Science</span>, 68(7), 5109–5126'
+        links:
+          - label: "Journal"
+            url: "https://doi.org/10.1287/mnsc.2021.4142"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3506499"
+        abstract: >-
+          We consider a sales effort management problem under an all-or-nothing constraint. The seller will receive no bonus/revenue if the sales volume fails to reach a predetermined target at the end of the sales horizon. Throughout the sales horizon, the sales process can be moderated by the seller through costly effort. We show that the optimal sales rate is nonmonotonic with respect to the remaining time or the outstanding sales volume required to reach the target. Generally, it has a watershed structure, such that for any needed sales volume, there exists a cutoff point on the remaining time above which the optimal sales rate decreases in the remaining time and below which it increases in the remaining time. We then study easy-to-compute heuristics that can be implemented efficiently. We start with a static heuristic derived from the deterministic analog of the stochastic problem. With an all-or-nothing constraint, we show that the performance of the static heuristic hinges on how the profit-maximizing rate fares against the target rate, which is defined as the sales target divided by the length of the sales horizon. When the profit-maximizing rate is higher than the target rate, the static heuristic adopting the optimal deterministic rate is asymptotically optimal with negligible loss. On the other hand, when the profit-maximizing rate is lower than the target rate, the performance loss of any asymptotically optimal static heuristic is of an order greater than the square root of the scale parameter. To address the poor performance of the static heuristic in the latter case, we propose a modified resolving heuristic and show that it is asymptotically optimal and achieves a logarithmic performance loss.
+
+      - id: consumer-profiling
+        title: "Consumer profiling with data requirements: Structure and policy implications"
+        url: "/assets/pdf/papers/consumer-profiling.pdf"
+        authors:
+          - name: "Tommaso Valletti"
+            url: "https://profiles.imperial.ac.uk/t.valletti"
+        citation_html: '2020, <span class="paper-venue">Production and Operations Management</span>, 29(2), 309–329'
+        links:
+          - label: "Journal"
+            url: "https://doi.org/10.1111/poms.13108"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2760276"
+        abstract: >-
+          We consider a model where a monopolist can profile consumers in order to price discriminate among them, and consumers can take costly actions to protect their identities and make the profiling technology less effective. A novel aspect of the model consists in the profiling technology: the signal that the monopolist gets about a consumer's willingness-to-pay can be made more accurate either by having more consumers revealing their identities, or by spending larger amounts of money (e.g., on third-party complementary data or data analytics capabilities). We show that both consumer surplus and social welfare are convex in the ability of consumers to conceal their identities. The interest of this result stems from the fact that consumers' concealing cost can be interpreted as a policy tool: a stricter privacy law would make the concealing cost lower, and vice-versa. Consequently, a policymaker who promotes total welfare should either make data protection very easy or very costly. The right direction of data regulations depends on data requirements. In particular, a higher (lower) data requirement is an instance when more (less) consumers are needed to achieve the same signal precision. We show that a strict data privacy law is preferable under a high data requirement so that firms are less likely to invest in profiling inefficiently, whereas there is less concern with little or no data regulations under a low data requirement. We also discuss when greater data protection may be beneficial to the firm.
+
+      - id: liking-and-following
+        title: "Liking and following and the newsvendor: Operations and marketing policies under social influence"
+        url: "/assets/pdf/papers/liking-and-following.pdf"
+        authors:
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+          - name: "Joseph Milner"
+            url: "https://discover.research.utoronto.ca/7534"
+        citation_html: '2016, <span class="paper-venue">Management Science</span>, 62(3), 867–879'
+        links:
+          - label: "Journal"
+            url: "https://doi.org/10.1287/mnsc.2015.2160"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2292787"
+        abstract: >-
+          We consider a monopolistic firm selling two substitutable products to a stream of sequential arrivals whose purchase decisions can be influenced by earlier purchases. Before demand realizes, the firm faces a newsvendor problem for the two products with economies of scale in production for each. When consumers are responsive to others' decisions, social influence amplifies demand uncertainty, leading to a lower profit for the firm. We propose three solutions for the firm to better cope with or even benefit from social influence: influencer recruitment and a reduced product assortment either before demand realization (ex ante) or under production postponement (ex post). First, the firm can offer promotional incentives to recruit consumers as influencers. We reveal an operational benefit of influencer marketing that a very small fraction of such influencers is sufficient to diminish sales' unpredictability. Second, as the potential substitutability between products increases due to social influence, the firm may leverage the increased substitutability and enjoy lower cost in production by reducing product assortment before demand realization. Last, under production postponement, the firm can take advantage of the way that social influence results in demand herding and reduce product varieties by reacting to preorder information.
+
+      - id: threshold-effects
+        title: "Threshold effects in online group buying"
+        url: "/assets/pdf/papers/threshold-effects.pdf"
+        authors:
+          - name: "Mengze Shi"
+            url: "https://mark.hkust.edu.hk/faculty-and-staff/directory/mengzeshi"
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+        citation_html: '2015, <span class="paper-venue">Management Science</span>, 61(9), 2025–2040'
+        links:
+          - label: "Journal"
+            url: "https://doi.org/10.1287/mnsc.2014.2015"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2176554"
+        abstract: >-
+          This paper studies two types of threshold-induced effects: a surge of new sign-ups around the time when the thresholds of group-buying deals are reached, and a stronger positive relation between the number of new sign-ups and the cumulative number of sign-ups before the thresholds are reached than afterward. This empirical study uses a data set that records the intertemporal cumulative number of sign-ups for group-buying deals in 86 city markets covered by Groupon, during a period of 71 days when Groupon predominantly used "a deal a day" format for each local market and posted the number of sign-ups in real time. We find that the first type of threshold effect is significant in all product categories and in all markets. The second type of threshold effect varies across product categories and markets. Our results underscore the importance of considering product and market characteristics in threshold design decisions for online group buying.
+
+      - id: simultaneous-vs-sequential
+        title: "Simultaneous vs. sequential group-buying mechanisms"
+        url: "/assets/pdf/papers/simultaneous-vs-sequential.pdf"
+        authors:
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+          - name: "Mengze Shi"
+            url: "https://mark.hkust.edu.hk/faculty-and-staff/directory/mengzeshi"
+        citation_html: '2013, <span class="paper-venue">Management Science</span>, 59(12), 2805–2822'
+        links:
+          - label: "Journal"
+            url: "https://doi.org/10.1287/mnsc.2013.1740"
+          - label: "SSRN"
+            url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1862465"
+        abstract: >-
+          This paper studies the design of group-buying mechanisms in a two-period game where cohorts of consumers arrive at a deal and make sign-up decisions sequentially. A firm can adopt either a sequential mechanism where the firm discloses to second-period arrivals the number of sign-ups accumulated in the first period, or a simultaneous mechanism where the firm does not post the number of first-period sign-ups and hence each cohort of consumers faces uncertainty about another cohort's size and valuations when making sign-up decisions. Our analysis shows that, compared with the simultaneous mechanism, the sequential mechanism leads to higher deal success rates and larger expected consumer surpluses. This result holds for a multiperiod extension and when the firm offers a price discount schedule with multiple breakpoints. Finally, when the firm can manage the sequence of arrivals, it should inform the smaller cohort of consumers first.
+
+  - heading: "Books and Conference Publications"
+    items:
+      - id: sharing-economy-chapter
+        title: "Online group buying and crowdfunding: Two cases of all-or-nothing mechanisms"
+        url: "https://link.springer.com/chapter/10.1007/978-3-030-01863-4_14"
+        authors:
+          - name: "Ming Hu"
+            url: "http://individual.utoronto.ca/minghu/"
+          - name: "Mengze Shi"
+            url: "https://mark.hkust.edu.hk/faculty-and-staff/directory/mengzeshi"
+        citation_html: '2019, <span class="paper-venue">Sharing Economy: Making Supply Meet Demand</span>, M. Hu (ed.), 319–346, in <span class="paper-venue">Springer Series in Supply Chain Management</span>, C. Tang (series ed.)'
+
+      - id: infocom-2009
+        title: "Keep cache replacement simple in peer-assisted VoD systems"
+        url: "https://ieeexplore.ieee.org/document/5062193"
+        authors:
+          - name: "Baochun Li"
+            url: "https://iqua.ece.toronto.edu/bli/"
+        citation_html: '2009, in <span class="paper-venue">Proceedings of IEEE INFOCOM</span>'
