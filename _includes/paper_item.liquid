@@ -6,7 +6,7 @@
 {% if item.url contains '://' %}
   {% assign resolved_title_url = item.url %}
 {% else %}
-  {% assign resolved_title_url = item.url | relative_url | bust_local_url %}
+  {% assign resolved_title_url = item.url | relative_url %}
 {% endif %}
 <li class="paper-item{% if compact %} paper-item-compact{% endif %}">
   <a class="paper-title" href="{{ resolved_title_url }}" target="_blank" rel="noopener">{{ item.title }}</a>
@@ -51,7 +51,7 @@
             {% if link.url contains '://' %}
               {% assign resolved_link_url = link.url %}
             {% else %}
-              {% assign resolved_link_url = link.url | relative_url | bust_local_url %}
+              {% assign resolved_link_url = link.url | relative_url %}
             {% endif %}
             <a class="paper-ext-link" href="{{ resolved_link_url }}" target="_blank" rel="noopener">{{ link.label }}</a>
           {% endfor %}
