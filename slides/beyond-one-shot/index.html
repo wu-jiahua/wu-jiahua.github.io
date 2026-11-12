@@ -986,10 +986,8 @@ Deck.slide({
   html: `
   <div class="abs center" style="left:0;right:0;top:190px;font-size:84px;line-height:1.2">Beyond One Shot:<br>Contracting for Sequential Trials</div>
   <div class="abs" style="left:50%;top:430px;width:140px;height:3px;margin-left:-70px;background:var(--gold)"></div>
-  <div class="abs center" style="left:0;right:0;top:488px;font-size:56px;line-height:1.3">Jiahua Wu</div>
-  <div class="abs center c-ink2" style="left:0;right:0;top:564px;font-size:36px;line-height:1.3">Imperial Business School</div>
-  <div class="abs center" style="left:0;right:0;top:660px;font-size:40px;line-height:1.3">with Yanwei Sun <span class="c-ink2" style="font-size:36px">(Imperial)</span> and Jibang Wu <span class="c-ink2" style="font-size:36px">(NYU Shanghai)</span></div>
-  <div class="abs center c-ink2" style="left:0;right:0;top:780px;font-size:36px;line-height:1.3">INFORMS Annual Meeting 2026</div>
+  <div class="abs center" style="left:0;right:0;top:520px;font-size:40px;line-height:1.3">Yanwei Sun <span class="c-ink2" style="font-size:36px">(Imperial)</span>, Jiahua Wu <span class="c-ink2" style="font-size:36px">(Imperial)</span>, Jibang Wu <span class="c-ink2" style="font-size:36px">(NYU Shanghai)</span></div>
+  <div class="abs center c-ink2" style="left:0;right:0;top:630px;font-size:36px;line-height:1.3">November 2026</div>
   `
 });
 </script>
@@ -2080,7 +2078,7 @@ Deck.sectionCard({ id: 'S5', index: 4, title: 'Conclusion',
     id: 'C01', section: 'Conclusion', title: 'Contracting and pricing for AI', steps: 1,
     notes: [
       "To wrap up: in <b>this talk</b> (on the left), a buyer contracts with an <b>AI agent</b> whose sequential trials are <b>hidden effort</b>. Our two main takeaways are that a simple calibrated <b>\\(\\bar\\zeta\\)-debt contract</b> is <b>asymptotically optimal</b>, and that because trials are hidden, the principal can actually be <b>worse off</b> with a <b>higher budget cap</b>.",
-      "On the right is the complementary problem, where an <b>AI seller</b> designs a contract for a buyer with a <b>hidden type</b>. We study this in our companion paper <b>Pricing AI as a Service</b>, which <b>Yanwei</b> will present in Session MB26 on Monday, November 2nd at 11:18 AM in Moscone South-204."
+      "On the right is the complementary problem, where an <b>AI seller</b> designs a contract for a buyer with a <b>hidden type</b>. We study this in our companion paper <b>Pricing AI as a Service</b> with Ilan Lobel and Yanwei Sun."
     ],
     html: `
       <style>
@@ -2109,11 +2107,9 @@ Deck.sectionCard({ id: 'S5', index: 4, title: 'Conclusion',
       <div class="c1-cap" style="left:${XR2}px" data-in="1">AI seller</div>
       <div class="c1-pill" style="left:${XR1}px" data-in="1">hidden type</div>
 
-      <div class="c1-body" style="left:${CR}px" data-in="1">
+      <div class="c1-body" style="left:${CR}px;top:654px" data-in="1">
         <div class="c1-hd">Pricing AI as a Service</div>
-        <div class="c1-au">Ilan Lobel · <b class="c-ink">Yanwei Sun</b> · Jiahua Wu</div>
-        <div class="c1-line"><b class="c-orange">Session MB26:</b> AI Agents, Pricing, and Firm Strategy</div>
-        <div class="c1-line c-ink2" style="font-size:33px">Monday, Nov 2 · 11:18 – 11:36 AM · Moscone South-204</div>
+        <div class="c1-au" style="margin-top:14px;margin-bottom:0">Ilan Lobel · Yanwei Sun · Jiahua Wu</div>
       </div>`,
     init(el, L) {
       const svg = L.svg(el);
