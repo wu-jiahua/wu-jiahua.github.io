@@ -111,7 +111,7 @@
               {% endif %}
               <a
                 class="nav-link"
-                href="{{ nav_href | relative_url }}"
+                href="{% if nav_href contains '.pdf' %}{{ nav_href | relative_url | bust_local_url }}{% else %}{{ nav_href | relative_url }}{% endif %}"
                 {% if nav_href contains '.pdf' %}target="_blank" rel="noopener"{% endif %}
                 {% if page.url contains parent_link %}aria-current="page"{% endif %}
               >
